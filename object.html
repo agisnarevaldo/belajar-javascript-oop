@@ -8,21 +8,23 @@
 </head>
 <body>
     <script>
-        function Person() {
-            this.firstName = "First Name";
-            this.lastName = "Last Name";
+        // Constructor Function
+        function Person(firstName, lastName) {
+            this.firstName = firstName
+            this.lastName = lastName;
             this.sayHello = function (name) {
                 console.info(`Hello ${name}, my name is ${this.firstName}`);
             }
         };
 
-        const agis = new Person();
-        agis.firstName = "Agisna";
-        agis.lastName = "Revaldo";
-        
-        console.log(agis);
+        const agis = new Person("Agisna", "Revaldo");
         agis.sayHello("Joko");
-        // console.log(Person);
+
+        const eren = new Person("Eren", "Yeager");
+        eren.sayHello("Mikasa");
+        
+        console.log(eren);
+        console.log(agis);
     </script>
 </body>
 </html>
