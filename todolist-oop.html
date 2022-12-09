@@ -9,44 +9,44 @@
 <body>
     <script>
         class TodoList {
-  constructor() {
-    this.todos = [];
-  }
+            constructor() {
+                this.todos = [];
+            }
 
-  addTodo(todo) {
-    this.todos.push(todo);
-  }
+            addTodo(todo) {
+                this.todos.push(todo);
+            }
 
-  deleteTodo(index) {
-    this.todos.splice(index, 1);
-  }
+            deleteTodo(index) {
+                this.todos.splice(index, 1);
+            }
 
-  printTodos() {
-    console.log(this.todos);
-  }
-}
+            printTodos() {
+                console.log(this.todos);
+            }
+            }
 
-class TodoItem {
-  constructor(name, description) {
-    this.name = name;
-    this.description = description;
-  }
-}
+            class TodoItem {
+            constructor(name, description) {
+                this.name = name;
+                this.description = description;
+            }
+            }
 
-const myTodoList = new TodoList();
+            const myTodoList = new TodoList();
 
-// Tambahkan beberapa item todo
-myTodoList.addTodo(new TodoItem("Belajar JavaScript", "Belajar dasar-dasar JavaScript"));
-myTodoList.addTodo(new TodoItem("Belajar OOP", "Belajar konsep-konsep OOP di JavaScript"));
+            // Tambahkan beberapa item todo
+            myTodoList.addTodo(new TodoItem("Belajar JavaScript", "Belajar dasar-dasar JavaScript"));
+            myTodoList.addTodo(new TodoItem("Belajar OOP", "Belajar konsep-konsep OOP di JavaScript"));
 
-// Cetak daftar todo
-myTodoList.printTodos();
+            // Cetak daftar todo
+            myTodoList.printTodos();
 
-// Hapus item todo ke-1
-myTodoList.deleteTodo(1);
+            // Hapus item todo ke-1
+            myTodoList.deleteTodo(1);
 
-// Cetak daftar todo setelah dihapus
-myTodoList.printTodos();
+            // Cetak daftar todo setelah dihapus
+            myTodoList.printTodos();
 
     </script>
 </body>
