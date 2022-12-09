@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobil</title>
+</head>
+<body>
+    <script>
+        // Membuat kelas Mobil
+        class Mobil {
+            // Menentukan properti mobil
+            constructor(merk, tahun) {
+                this.merk = merk;
+                this.tahun = tahun;
+            }
+
+            // Method untuk menampilkan informasi mobil
+            info() {
+            console.log(`Mobil ini merupakan mobil merk ${this.merk} tahun ${this.tahun}.`);
+            }
+        }
+
+        // Membuat objek mobil baru dari kelas Mobil
+        let mobil = new Mobil("Toyota", 2020);
+
+        // Menampilkan informasi mobil
+        mobil.info();
+
+    </script>
+</body>
+</html>
