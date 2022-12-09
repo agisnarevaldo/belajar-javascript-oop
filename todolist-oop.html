@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoList</title>
+</head>
+<body>
+    <script>
+        class TodoList {
+  constructor() {
+    this.todos = [];
+  }
+
+  addTodo(todo) {
+    this.todos.push(todo);
+  }
+
+  deleteTodo(index) {
+    this.todos.splice(index, 1);
+  }
+
+  printTodos() {
+    console.log(this.todos);
+  }
+}
+
+class TodoItem {
+  constructor(name, description) {
+    this.name = name;
+    this.description = description;
+  }
+}
+
+const myTodoList = new TodoList();
+
+// Tambahkan beberapa item todo
+myTodoList.addTodo(new TodoItem("Belajar JavaScript", "Belajar dasar-dasar JavaScript"));
+myTodoList.addTodo(new TodoItem("Belajar OOP", "Belajar konsep-konsep OOP di JavaScript"));
+
+// Cetak daftar todo
+myTodoList.printTodos();
+
+// Hapus item todo ke-1
+myTodoList.deleteTodo(1);
+
+// Cetak daftar todo setelah dihapus
+myTodoList.printTodos();
+
+    </script>
+</body>
+</html>
