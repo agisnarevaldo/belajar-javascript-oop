@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Field</title>
+</head>
+<body>
+    <script>
+        class Configuration {
+            static name = "Belajar Javascript OOP";
+            static version = 1.2;
+            static author = "Eko Kurniawan";
+
+            member;
+
+            constructor(member) {
+                this.member = member;
+            }
+        }
+
+        const config1 = new Configuration("Agisna");
+        console.info(config1);
+        console.info(config1.member);
+
+        Configuration.author = "Eko Kurniawan Khanedy";
+
+        console.info(Configuration.name);
+        console.info(Configuration.version);
+        console.info(Configuration.author);
+
+    </script>
+</body>
+</html>
