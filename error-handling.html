@@ -29,10 +29,32 @@
             console.info(MathUtil.sum());
         } catch (error) {
             console.info(`Terjadi error: ${error.message}`);
+        } finally {
+            console.info('Prgogram Selesai');
         }
 
         const result = MathUtil.sum(2, 2, 2, 2, 2);
         console.info(result);
+
+        class Counter {
+
+            #counter = 1;
+
+            next() {
+                try {
+                    return this.#counter;
+                } finally {
+                    this.#counter++;
+                }
+            }
+        }
+
+        const counter = new Counter();
+        console.info(counter.next());
+        console.info(counter.next());
+        console.info(counter.next());
+        console.info(counter.next());
+        console.info(counter.next());   
     </script>
 </body>
 </html>
